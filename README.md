@@ -16,6 +16,44 @@ Demonstrate your knowledge of how to develop an object oriented python program t
    3. Create a function that reads the customer data from a CSV file and creates Customer objects from it.
    4. To find the customer with the specified ID, you need to loop through each Customer object in the list of Customer objects and check whether the specified ID matches the ID stored in the Customer object.
    5. If the specified ID isn’t found, display an appropriate message.
+   6. You have been provided with the starter code, make sure you complete the activity and use the same function names as provided in the starter code. Also, make sure that to pass the return value from the functions wherever necessary.
+   7. Push all the files into the GitHub repository.
+   8. Before pushing the code to GitHub you can check to test whether your code passes all the Testcases provided in the TestActivity8.py file.
+   
+ ```Python
+ import csv
+ 
+ class Customer:
+ 
+	def __init__():
+		pass
+
+def display_title():
+    pass
+
+def csv_reader():
+	pass
+	
+def find_customer(cust_id):
+	csv_reader()
+	pass
+
+def main():
+	display_title()
+	while True:
+		cust_id = input("Enter Customer ID:")
+		find_customer(cust_id)
+		
+		
+if __name__ == '__main__':
+    main()
+ 
+ 
+ 
+ 
+ 
+ ```
+		
 
 ## Submitting your assignment
 1. When you are happy with your working code push the code to GitHub and be sure your GitHub repository is updated.
