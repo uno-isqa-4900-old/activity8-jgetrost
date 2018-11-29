@@ -37,11 +37,11 @@ def csv_reader():
                 #if its not empty
                 if str.strip(record[0]) != "":
                     #create new result
-                    Customer(int(record[0]), record[1], record[2], record[3], record[4], record[5], record[6], record[7])
+                    Customer(record[0], record[1], record[2], record[3], record[4], record[5], record[6], record[7])
 
 def find_customer(cust_id):
     csv_reader()
-    
+
     found = False
     # for all the results
     for customer in Customer.customers:
@@ -61,7 +61,7 @@ def main():
     keep_going = True
 
     while keep_going:
-        cust_id = int(input("\nEnter Customer ID: "))
+        cust_id = input("\nEnter Customer ID: ")
         find_customer(cust_id)
 
         response = ""
