@@ -3,10 +3,10 @@ import csv
 class Customer:
     customers = []
 
-    def __init__(self, id, first_name, last_name, company_name, address, city, state, zip):
+    def __init__(self, id, firstName, lastName, company_name, address, city, state, zip):
         self.id = id
-        self.first_name = first_name
-        self.last_name = last_name
+        self.firstName = firstName
+        self.lastName = lastName
         self.company_name = company_name
         self.address = address
         self.city = city
@@ -48,10 +48,10 @@ def find_customer(cust_id):
         # if the id matches
         if(customer.id == cust_id):
             # return the string to print
-            print("\n{:s} {:s}\n{:s}\n{:s}, {:s} {:s}".format(customer.first_name, customer.last_name, customer.address, customer.city, customer.state, customer.zip))
             found = True
+            return customer
     if found == False:
-        print("\nNo customer with that ID.")
+        return "No customer with that specified ID."
         
 
 
@@ -62,7 +62,13 @@ def main():
 
     while keep_going:
         cust_id = input("\nEnter Customer ID: ")
-        find_customer(cust_id)
+        
+        result = find_customer(cust_id)
+
+        if result == "No customer with that specified ID.":
+            print("\n" + result)
+        else:
+            print("\n{:s} {:s}\n{:s}\n{:s}, {:s} {:s}".format(result.firstName, result.lastName, result.address, result.city, result.state, result.zip))
 
         response = ""
         while response == "":
